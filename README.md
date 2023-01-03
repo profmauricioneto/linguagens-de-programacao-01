@@ -1,5 +1,5 @@
 <h2>  
-  <b>Linguagens De Programacao I 2022.2</b>
+  <b>Linguagens De Programacao I</b>
 </h2>
 
 Este repositório tem o objetivo de auxiliar os alunos de Linguagens de Programação I da Unichristus. 
