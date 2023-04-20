@@ -33,7 +33,8 @@ public class FlowLayoutExample extends JFrame {
         bCenter = new JButton("Button Center");
         
         Container cont = getContentPane();
-        setLayout(new FlowLayout());
+        FlowLayout flow = new FlowLayout();
+        setLayout(flow);
         
         cont.add(label1);
         cont.add(text1);

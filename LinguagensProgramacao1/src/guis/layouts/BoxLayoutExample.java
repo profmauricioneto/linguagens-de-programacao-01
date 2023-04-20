@@ -22,7 +22,7 @@ public class BoxLayoutExample extends JFrame {
     public BoxLayoutExample() {
         super("Box Example");
         Container cont = getContentPane();
-        Box horizon = Box.createVerticalBox();
+        Box horizon = Box.createHorizontalBox();
         
         bNorth = new JButton("Button North");
         bSouth = new JButton("Button South");
@@ -37,7 +37,7 @@ public class BoxLayoutExample extends JFrame {
         horizon.add(bWest);
         
         cont.add(horizon, BorderLayout.CENTER);
-        setLayout(new BoxLayout(cont, BoxLayout.X_AXIS));
+        setLayout(new BoxLayout(cont, BoxLayout.Y_AXIS));
         
         setSize(400,400);
         setVisible(true);

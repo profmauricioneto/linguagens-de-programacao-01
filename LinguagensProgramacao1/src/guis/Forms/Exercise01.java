@@ -5,10 +5,13 @@
 package guis.Forms;
 
 import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
@@ -17,18 +20,19 @@ import javax.swing.JTextField;
  * @author maumneto
  */
 public class Exercise01 extends JFrame {
+    
+    JLabel firstnameLabel = new JLabel("Nome");
+    JLabel lastnameLabel = new JLabel("Sobrenome");
+    JTextField firstnameText = new JTextField();
+    JTextField lastnameText = new JTextField();
+    JButton sendButton = new JButton("Send");
+    JRadioButton mascButton = new JRadioButton("Masculino", true);
+    JRadioButton femButton = new JRadioButton("Feminino");
+    
     public Exercise01() {
         super("Formulário");
         setLayout(null);
         Container container = getContentPane();
-        
-        JLabel firstnameLabel = new JLabel("Nome");
-        JLabel lastnameLabel = new JLabel("Sobrenome");
-        JTextField firstnameText = new JTextField();
-        JTextField lastnameText = new JTextField();
-        JButton sendButton = new JButton("Send");
-        JRadioButton mascButton = new JRadioButton("Masculino", true);
-        JRadioButton femButton = new JRadioButton("Feminino");
         
         ButtonGroup radioButtonGroup = new ButtonGroup();
         radioButtonGroup.add(femButton);
@@ -50,8 +54,26 @@ public class Exercise01 extends JFrame {
         femButton.setBounds(20, 130, 200, 20);
         sendButton.setBounds(100, 160, 100, 20);
         
+        SendData event = new SendData();
+        sendButton.addActionListener(event);
+        
         setSize(400, 300);
         setVisible(true);
+    }
+    
+    private class SendData implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String gender = "";
+            String name = firstnameText.getText();
+            if (femButton.isSelected()) {
+                JOptionPane.showMessageDialog(null, "Message Sended, Ms." + name, "Confirmed", 1);
+            } else {
+                JOptionPane.showMessageDialog(null, "Message Sended, Mr." + name, "Confirmed", 1);
+            }
+            firstnameText.requestFocus();
+        }
     }
     
     public static void main(String[] args) {

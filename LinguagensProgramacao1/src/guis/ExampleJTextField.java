@@ -16,7 +16,7 @@ public class ExampleJTextField {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Example JTextField");
         JTextField input = new JTextField();
-        JButton button = new JButton("Greeting");
+        JButton button = new JButton("OK");
         JLabel output = new JLabel();
         
         frame.setLayout(null);
@@ -33,7 +33,8 @@ public class ExampleJTextField {
             public void actionPerformed(ActionEvent e) {
                 String name;
                 name = input.getText();
-                output.setText("Hello There, " + name);
+//                output.setText("Hello There, " + name);
+                output.setText(name);
                 input.setText("");
             }
         });

@@ -31,7 +31,8 @@ public class GridLayoutExample extends JFrame {
         bBefore2 = new JButton("Button Before2");
         
         Container cont = getContentPane();
-        setLayout(new GridLayout(2,3));
+        GridLayout grid = new GridLayout(2,3);
+        setLayout(grid);
         
         cont.add(bNorth);
         cont.add(bSouth);
@@ -39,8 +40,8 @@ public class GridLayoutExample extends JFrame {
         cont.add(bWest);
         cont.add(bCenter);
         cont.add(bAfter);
-        cont.add(bAfter2);
-        cont.add(bBefore);
+//        cont.add(bAfter2);
+//        cont.add(bBefore);
 //        cont.add(bBefore2);
         
         setSize(400, 400);

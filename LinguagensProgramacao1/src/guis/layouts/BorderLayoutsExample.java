@@ -28,12 +28,13 @@ public class BorderLayoutsExample extends JFrame {
         bCenter = new JButton("Button Center");
         
         Container cont = getContentPane();
-        setLayout(new BorderLayout());
+        BorderLayout border = new BorderLayout();
+        setLayout(border);
         
-        cont.add(bNorth, BorderLayout.CENTER);
+        cont.add(bNorth, BorderLayout.NORTH);
         cont.add(bSouth, BorderLayout.SOUTH);
         cont.add(bEast, BorderLayout.EAST);
-        cont.add(bWest, BorderLayout.CENTER);
+        cont.add(bWest, BorderLayout.WEST);
         cont.add(bCenter, BorderLayout.CENTER);
                 
         setSize(400, 400);

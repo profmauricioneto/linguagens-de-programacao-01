@@ -76,7 +76,7 @@ public class JCheckButtonExample extends JFrame {
         
         total.setText(String.valueOf(total_value));
         
-        setSize(200, 450);
+        setSize(300, 450);
         setVisible(true);    
     }
     
