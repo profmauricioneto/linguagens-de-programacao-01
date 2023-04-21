@@ -1,0 +1,37 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Example of JS in HTML</title>
+        <style>
+            p {
+                font-size: 20px;
+                color: #ff0000;
+            }
+        </style>
+        <script>
+            const showDescription = function () {
+                const title = document.querySelector('h1');
+                const description = document.createElement('p');
+                description.innerHTML = "This element was putted by JS.";
+                console.log('event fired 1');
+                title.appendChild(description);
+            }
+            const removeDescription = function () {
+                console.log('event fired 2');
+                const description = document.querySelector('p');
+                description.remove();
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Example of JS in HTML</h1>
+        <button onclick="showDescription()">show description</button>
+        <button onclick="removeDescription()">remove description</button>
+    </body>
+
+    </html>
