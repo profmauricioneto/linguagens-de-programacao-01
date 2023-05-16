@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aula de Tabelas</title>
+    <style>
+        table, tr, td, th {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        tr, td, th {
+            text-align: center;
+        }
+        td:nth-child(odd), th:nth-child(odd) {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Primeira Tabela</h2>
+    </header>
+    <section>
+        <h2>Primeiro Formato</h2>
+        <table>
+            <tr>
+                <th><b>Nome</b></th>
+                <th><b>Matrícula</b></th>
+                <th><b>Endereço</b></th>
+            </tr>
+            <tr>
+                <td>Maurício Neto</td>
+                <td>1234567</td>
+                <td>Rua Fulano, 111</td>
+            </tr>
+            <tr>
+                <td>Cicrano de Tal</td>
+                <td>7654321</td>
+                <td>Rua ABC, 222</td>
+            </tr>
+        </table>
+
+        <h2>Segundo Formato</h2>
+        <table>
+            <caption>Tabela Exemplo</caption>
+            <thead>
+                <tr>
+                    <th><b>Nome</b></th>
+                    <th><b>Matrícula</b></th>
+                    <th><b>Endereço</b></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maurício Neto</td>
+                    <td>1234567</td>
+                    <td>Rua Fulano, 111</td>
+                </tr>
+                <tr>
+                    <td>Cicrano de Tal</td>
+                    <td>7654321</td>
+                    <td>Rua ABC, 222</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Terceiro Formato</h2>
+        <table>
+            <tr>
+                <th><b>Nome</b></th>
+                <td>Maurício Neto</td>
+                <td>Fulano de Tal</td>
+            </tr>
+            <tr>
+                <th><b>Matrícula</b></th>
+                <td>1234567</td>
+                <td>7654321</td>
+            </tr>
+            <tr>
+                <th><b>Endereço</b></th>
+                <td>Rua Fulano, 111</td>
+                <td>Rua ABC, 222</td>
+            </tr>
+        </table>
+
+        <h2>Quarta Formato</h2>
+        <table>
+            <tr>
+                <th colspan="3"><b>Endereço</b></th>
+                <th><b>CEP</b></th>
+            </tr>
+            <tr>
+                <td>Rua</td>
+                <td>Fulano de tal</td>
+                <td>111</td>
+                <td>60111-123</td>
+            </tr>
+            <tr>
+                <td>Avenida</td>
+                <td>Cicrano de Tal</td>
+                <td>321</td>
+                <td>60222-321</td>               
+            </tr>
+        </table>
+    </section>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

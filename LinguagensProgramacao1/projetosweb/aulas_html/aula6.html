@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Class</title>
+    <style>
+        .my-card {
+            border: 2px dotted black;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .change-color {
+            color: blue;
+        }
+
+        #cabecalho {
+            background-color: cadetblue;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <h1>Exemplo de Classe e ID</h1>
+        <p>Este exemplo vem da aula de classe e ids.</p>
+    </header>
+    
+    <button onclick="changeColorHeader()">Mudar a cor do Cabeçalho</button>
+    <button onclick="hideCards()">Esconder Card</button>
+    <button onclick="showCards()">Mostrar Card</button>
+    <div class="my-card change-color">
+        <h2>Fortaleza!</h2>
+        <p>Fortaleza é um município brasileiro, capital do estado do Ceará, situado na região Nordeste do país.</p>
+    </div>
+
+    <section class="my-card">
+        <h2>Teresina!</h2>
+        <p>Teresina é uma das cidades do Nordeste mais quentes que eu já fui! Lá urubu voa com uma asa só e a outra abanando.</p>
+    </section>
+
+    <script>
+        function hideCards() {
+            var cards = document.getElementsByClassName("my-card");
+            for (let i = 0; i < cards.length; i++) {
+                cards[i].style.display = "none";
+            }
+        }
+
+        function showCards() {
+            var cards = document.getElementsByClassName("my-card");
+            for (let i = 0; i < cards.length; i++) {
+                cards[i].style.display = "block";
+            }
+        }
+
+        function changeColorHeader() {
+            document.getElementById("cabecalho").style.backgroundColor = "purple";
+        }
+
+    </script>
+</body>
+</html>
