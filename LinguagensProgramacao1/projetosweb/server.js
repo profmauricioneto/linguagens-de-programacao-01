@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 // Configurando o servidor para usar arquivos estáticos
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'ç/aulas_html/aula7.html'));
+    res.sendFile(path.join(__dirname, '/aulas_html/aula7.html'));
 });
 
 app.post('/result', (req, res) => {

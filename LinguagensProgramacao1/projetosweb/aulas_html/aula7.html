@@ -13,23 +13,25 @@
     <form action="/" method="get" id="meu-formulario">
         <div id="dado-nome">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="insirir nome!"/>
+            <input type="text" id="nome" placeholder="Inserir Nome!"/>
         </div>
 
         <div id="dado-apelido">
             <label for="apelido">Apelido</label>
-            <input type="text" id="apelido" name="apelido" placeholder="insirir apelido!"/>
+            <input type="text" id="apelido" placeholder="Inserir Apelido!"/>
         </div>
         <button type="submit">Enviar</button>
     </form>
     <script>
+        // pegando a referencia do formulário
         let formulario = document.querySelector('#meu-formulario');
         formulario.addEventListener("submit", (event) => {
+            // cancela o envio do formulário caso ocorra algo.
             event.preventDefault();
-
+            // pegando os valores dos inputs
             let nome = document.getElementById('nome');
             let apelido = document.getElementById('apelido');
-
+            // verificando se os campos estão vazios
             if (nome.value == "" || apelido.value == "") {
                 alert("Preencha os campos!");
             } else {
@@ -38,6 +40,7 @@
                     nome: nome.value,
                     apelido: apelido.value
                 }
+                // convertendo o objeto para string e armazenando no localStorage
                 let convertData = JSON.stringify(data);
                 localStorage.setItem('personal_data', convertData);
                 console.log(convertData);
