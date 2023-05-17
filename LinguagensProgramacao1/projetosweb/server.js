@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/aulas_html/aula7.html'));
 });
 
-app.post('/result', (req, res) => {
-    res.status(200).send(req.body);
-});
+// app.post('/result', (req, res) => {
+//     res.status(200).send(req.body);
+// });
 
 app.listen(port, (error) => {
     if (error) {

@@ -11,20 +11,54 @@
         <h2>Primeiro Formulário</h2>
     </header>
     <form action="/" method="get" id="meu-formulario">
+        
+        <h4>Dados Pessoais</h4>
         <div id="dado-nome">
             <label for="nome">Nome</label>
             <input type="text" id="nome" placeholder="Inserir Nome!"/>
         </div>
-
         <div id="dado-apelido">
             <label for="apelido">Apelido</label>
             <input type="text" id="apelido" placeholder="Inserir Apelido!"/>
         </div>
-        <button type="submit">Enviar</button>
+
+        <h4>Dado de Nacionalidade</h4>
+        <div id="dado-pais">
+            <input type="radio" id="brasil" name="paises" value="BRASIL">
+            <label for="brasil">Brasil</label>
+            <br/>
+            <input type="radio" id="mexico" name="paises" value="MEXICO">
+            <label for="mexico">Mexico</label>
+            <br/>
+            <input type="radio" id="chile" name="paises" value="CHILE">
+            <label for="chile">Chile</label>
+            <br/>
+            <input type="radio" id="outros" name="paises" value="OUTROS" checked>
+            <label for="outros">Outros</label>
+        </div>
+
+        <h4>Dados de Linguagens de Interesse</h4>
+        <div id="dados-interesse">
+            <input type="checkbox" id="c" name="linguagens" value="C">
+            <label for="c">C</label>
+            <br/>
+            <input type="checkbox" id="java" name="linguagens" value="JAVA">
+            <label for="java">Java</label>
+            <br/>
+            <input type="checkbox" id="javascript" name="linguagens" value="JAVASCRIPT">
+            <label for="javascript">JAVASCRIPT</label>
+            <br/>
+            <input type="checkbox" id="python" name="linguagens" value="PYTHON">
+            <label for="python">Python</label>
+            <br/>
+        </div>
+
+        <button type="submit">Enviar Dados</button>
     </form>
     <script>
         // pegando a referencia do formulário
-        let formulario = document.querySelector('#meu-formulario');
+        // let formulario = document.querySelector('#meu-formulario');
+        let formulario = document.getElementById('meu-formulario');
         formulario.addEventListener("submit", (event) => {
             // cancela o envio do formulário caso ocorra algo.
             event.preventDefault();
