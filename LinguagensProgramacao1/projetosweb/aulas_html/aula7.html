@@ -10,7 +10,7 @@
     <header>
         <h2>Primeiro Formulário</h2>
     </header>
-    <form action="/" method="get" id="meu-formulario">
+    <form action="/" method="get" id="meu-formulario" oninput="result.value = parseFloat(x.value) + parseFloat(y.value);">
         
         <h4>Dados Pessoais</h4>
         <div id="dado-nome">
@@ -51,6 +51,44 @@
             <input type="checkbox" id="python" name="linguagens" value="PYTHON">
             <label for="python">Python</label>
             <br/>
+        </div>
+
+        <div id="select-example">
+            <label for="langs">Qual linguagem pretende estudar?</label>
+            <select name="langs" id="my-langs">
+                <option value="C">C</option>
+                <option value="KOTLIN">Kotlin</option>
+                <option value="CSHARP">C#</option>
+                <option value="PYTHON">Python</option>
+            </select>
+        </div>
+
+        <div id="textarea-example">
+            <label for="textarea"><b>Mande sua mensagem!</b></label>
+            <div id="my-textarea">
+                <textarea rows="10" cols="30"></textarea>
+            </div>
+            <button onclick="alert('mensagem enviada')">Enviar</button>
+        </div>
+
+        <div id="datalist-example">
+            <label for="ide">Escolha a sua IDE</label>
+            <input type="text" list="ide" name="ide">
+            <datalist id="ide">
+                <option value="NETBEANS"></option>
+                <option value="ECLIPSE"></option>
+                <option value="ITELLIJ"></option>
+                <option value="CODEBLOCKS"></option>
+            </datalist>
+        </div>
+
+        <div id="example-output">
+            <input type="number" id="x" value="0">
+            +
+            <input type="number" id="y" value="0">
+            =
+            <output name="result" for="xy"></output>
+            <button type="submit">calcular</button>
         </div>
 
         <button type="submit">Enviar Dados</button>
