@@ -4,31 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style0.css">
-    <title>Exemplo de CSS Externo</title>
+    <title>Exemplo CSS 2</title>
+    <style>
+        * {
+            font-family: monospace;
+            padding: 0;
+        }
+        .my-card {
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black;
+        }
+ 
+        .my-card:hover {
+            background-color: blue;
+        } 
+    </style>
 </head>
 <body>
-    <header>
-        <h2>Título do meu site!</h2>
-        <p>Subtítulo do site!</p>
-    </header>
-    <section>
-        <p>
-            Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.Pra lá , depois divoltis porris, paradis. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.
-
-            <div class="exemplo">
-                Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.
-            </div>
-
-            <cite class="exemplo">
-                <q>Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non.</q>
-            </cite>
-        </p>
-    </section>
-    <footer>
-        <p>
-            &copy; 2023 - Todos os direitos reservados.
-        </p>
-    </footer>
+    <div class="my-card">
+        <h1>Hello <span>World!</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ipsum risus, lacinia et elit sodales, gravida suscipit odio. Aliquam rutrum blandit nisi at sodales.</p>
+    </div>
+    <button onclick="addCard()">Add Card</button>
 </body>
+
+<script>
+    function addCard() {
+        var card = document.createElement('div');
+        card.classList.add('my-card');
+        var title = document.createElement('h1');
+        title.textContent = "Hello World";
+        var paragraph = document.createElement('p');
+        paragraph.textContent = "this is my card";
+        card.appendChild(title);
+        card.appendChild(paragraph);
+        document.body.appendChild(card);
+    }
+</script>
 </html>
