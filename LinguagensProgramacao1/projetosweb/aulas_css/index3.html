@@ -13,7 +13,7 @@
         }
         /* pseudo-classes para hyperlinks */
         a:link {
-            color: blue;
+            color: yellow;
         }
         a:visited {
             color: red;
@@ -24,6 +24,7 @@
         a:active {
             color: green;
         }
+
         /* pseudo-elementos */
         /* primeira linha do texto será azul e espaçada */
         p::first-line {
@@ -36,21 +37,23 @@
             color: #ff0000;
             font-size: xx-large;
             font-weight: bold;
-            font-family: cursive;
+            font-family: monospace;
         }
         /* elementos selecionados ficaram amarelos */
         ::selection {
-            background-color: yellow;   
+            background-color: yellow;  
+            color:#ff0000 
         }
         /* pseudo-elemento para estilizar os bullets das listas */
         ::marker {
-            font-size: 20px;
+            font-size: 30px;
             color: blue;
         }
         /* adiciona a imagem antes da tag referenciada */
-        div::before {
-            content: url(/img/florkandcows.png);
+        div::after {
+            /* content: url(assets/flork-fazendo-ok.png); */
         }
+
     </style>
 </head>
 <body>
@@ -62,7 +65,7 @@
     <hr/>
 
     <nav>
-        <a href="test0">Google</a>
+        <a href="/">Google</a>
         <a href="teste1">Google</a>
         <a href="teste2">Google</a>
         <a href="teste3">Google</a>

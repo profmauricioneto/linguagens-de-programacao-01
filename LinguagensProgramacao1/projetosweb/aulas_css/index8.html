@@ -33,13 +33,13 @@
 </body>
 <script>
     var leftInner = parseInt($('#s-div').css('left'));
-    console.log(leftInner);
+    var rightOuter = parseInt($('#f-div').css('right'));
     var letOuter = parseInt($('#f-div').css('height'));
-    console.log(letOuter);
     function leftMove() {
         $(document).ready(function () {
-            if (leftInner < letOuter) {
+            if (rightInner < letOuter) {
                 leftInner++;
+                $('#s-div').css('left', leftInner + 'px');
                 console.log(leftInner);
             } else {
                 window.alert("Maximo para Esquerda!");

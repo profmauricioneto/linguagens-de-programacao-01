@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinação de Seletores!</title>
+    <style>
+        header h2 {
+            font-size: 24px;
+            color: #0000ff;
+        }
+        header p {
+            font-size: 18px;
+            color: #0000aa;
+        }
+
+        div > section {
+            font-size: 14px;
+            color: black;
+            border: 2px solid black;
+        }
+
+        section + article {
+            color: white;
+            background-color: purple;
+        }
+
+        p ~ cite {
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+
+        /* section {
+            background-color: red;
+            opacity: 100;
+        } */
+
+        #main {
+            /* border-width: 1px;
+            border-color: black;
+            border-style: solid;
+            border-radius: 5px; */
+            border: 1px black solid 5px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h2>Título da Minha Página</h2>
+        <p>Subtítulo da minha página</p>
+    </header>
+
+    <div id="main">
+        <section class="my-card">
+            <h2>Card 1</h2>
+            <p>Conteúdo da card 1</p>
+            <cite>
+                <q>Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium dia nois paga.Viva Forevis aptent taciti sociosqu ad litora torquent.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Aenean aliquam molestie leo, vitae iaculis nisl.</q>
+            </cite>
+        </section>
+        <article>
+            <cite>
+                <q>Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium dia nois paga.Viva Forevis aptent taciti sociosqu ad litora torquent.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Aenean aliquam molestie leo, vitae iaculis nisl.</q>
+            </cite> 
+        </article>
+        <section>
+            <h2>Card 1</h2>
+            <p>Conteúdo da card 1</p>
+            <cite>
+                <q>Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium dia nois paga.Viva Forevis aptent taciti sociosqu ad litora torquent.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Aenean aliquam molestie leo, vitae iaculis nisl.</q>
+            </cite>
+        </section>
+        <article>
+            <cite>
+                <q>Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium dia nois paga.Viva Forevis aptent taciti sociosqu ad litora torquent.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Aenean aliquam molestie leo, vitae iaculis nisl.</q>
+            </cite> 
+        </article>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
